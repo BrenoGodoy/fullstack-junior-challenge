@@ -8,7 +8,7 @@ export const secretMiddleware = async (req: NextRequest, res: NextResponse, next
       return NextResponse.json({message: "Usuário não autorizado!"}, {status: 401});
     }
 
-   return next();
+   return next(body);
   } catch (error: any) {
     if (error.message === 'Unexpected end of JSON input') {
       return NextResponse.json({message: "Usuário não autorizado!"}, {status: 401});
@@ -18,13 +18,10 @@ export const secretMiddleware = async (req: NextRequest, res: NextResponse, next
   }
 }
 
-export const verifySubmitBody = async (req: NextRequest, res: NextResponse, next: Function) => {
+export const verifySubmitBody = async (req: NextRequest, res: NextResponse, next: Function, body?: any) => {
   try {    
-    const body = await req.json();
 
-    // Adicionar Zod Aqui!
-
-    return next();
+    return next(body);
   } catch (error: any) {
     if (error.message === 'Unexpected end of JSON input') {
       return NextResponse.json({message: "Usuário não autorizado!"}, {status: 401});
