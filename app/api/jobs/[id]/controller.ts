@@ -6,7 +6,7 @@ export const getById = async (req: NextRequest, res: NextResponse) => {
   const job = jobs.find(job => job.id === parseInt(id));
 
   if (!job) {
-    return NextResponse.json({ message: "Job não encontrado" }, { status: 404 });
+    return NextResponse.json({ message: "Job não encontrado!" }, { status: 404 });
   }
 
   return NextResponse.json(job);

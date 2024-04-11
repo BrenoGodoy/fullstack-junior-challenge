@@ -27,7 +27,7 @@ export const verifySubmitBody = async (req: NextRequest, res: NextResponse, next
     return next(body);
   } catch (error: any) {
     if (error instanceof z.ZodError) {
-      return NextResponse.json({ message: "Corpo da requisição inválido" }, { status: 400 });
+      return NextResponse.json({ message: "Corpo da requisição inválido!" }, { status: 400 });
     }
     if (error.message === 'Unexpected end of JSON input') {
       return NextResponse.json({message: "Usuário não autorizado!"}, {status: 401});
