@@ -1,5 +1,5 @@
 import { getAll } from "./controller";
-import { handler } from "../middleware/handler";
-import { secretMiddleware } from "./middlewares";
+import { handler } from "../middlewares/handler";
+import { secretMiddleware } from "../middlewares/index";
 
 export const POST = handler(secretMiddleware, getAll);
