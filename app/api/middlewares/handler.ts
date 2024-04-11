@@ -4,14 +4,14 @@ export const handler =
   (...middleware: any[]) =>
   async (request: NextRequest) => {
     let result;
-    let body; // Store the parsed body here
+    let body;
     for (let i = 0; i < middleware.length; i++) {
       let nextInvoked = false;
-      const next = async (parsedBody?: any) => { // Optional argument to receive body
+      const next = async (parsedBody?: any) => {
         nextInvoked = true;
-        body = parsedBody; // Save the passed body
+        body = parsedBody; 
       };
-      result = await middleware[i](request, null, next, body); // Pass body if available
+      result = await middleware[i](request, null, next, body);
       if (!nextInvoked) {
         break;
       }
