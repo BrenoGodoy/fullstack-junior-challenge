@@ -1,6 +1,8 @@
+import { NextRequest } from "next/server";
+
 export const handler =
   (...middleware: any[]) =>
-  async (request: any) => {
+  async (request: NextRequest) => {
     let result;
     for (let i = 0; i < middleware.length; i++) {
       let nextInvoked = false;
