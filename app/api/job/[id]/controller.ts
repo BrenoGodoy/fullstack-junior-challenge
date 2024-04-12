@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { Status } from "../../utils/status";
 
 export const getById = async (req: NextRequest, res: NextResponse) => {
-  const id = req.url.split('jobs/')[1];
+  const id = req.url.split('job/')[1];
   const job = jobs.find(job => job.id === parseInt(id));
 
   if (!job) {
