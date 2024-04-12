@@ -5,14 +5,13 @@ import { Status } from "../utils/status";
 
 export const secretMiddleware = async (req: NextRequest, res: NextResponse, next: Function) => {
   try {
-    const body = await req.json();
     const secret = req.headers.get('secret');
   
     if (secret !== process.env.SECRET) {
       return NextResponse.json({message: "Usuário não autorizado!"}, {status: Status.UNAUTHORIZED});
     }
 
-   return next(body);
+   return next(req);
   } catch (error: any) {
     if (error.message === 'Unexpected end of JSON input') {
       return NextResponse.json({message: "Usuário não autorizado!"}, {status: Status.UNAUTHORIZED});
@@ -22,8 +21,9 @@ export const secretMiddleware = async (req: NextRequest, res: NextResponse, next
   }
 }
 
-export const verifySubmitBody = async (req: NextRequest, res: NextResponse, next: Function, body?: any) => {
-  try {    
+export const verifySubmitBody = async (req: NextRequest, res: NextResponse, next: Function) => {
+  try {
+    const body = await req.json();    
     RequestBodySchema.parse(body);
 
     return next(body);
