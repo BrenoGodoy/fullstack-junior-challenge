@@ -1,3 +1,5 @@
+import Icon from "./components/icon";
+
 export default function SearchBar() {
   return (
     <form className="flex flex-col items-start mt-10">
@@ -9,6 +11,16 @@ export default function SearchBar() {
                 </svg>
                 <span className="sr-only">Search</span>
             </button>
+        </div>
+        <div className="flex flex-col mt-5">
+          <div className="flex flex-wrap">
+            <Icon>Fresh Vegetables</Icon>
+            <Icon>100% Guarantee</Icon>
+          </div>
+          <div className="flex flex-wrap">
+            <Icon>Cash on Delivery</Icon>
+            <Icon>Fast Delivery</Icon>
+          </div>
         </div>
     </form>
   )
