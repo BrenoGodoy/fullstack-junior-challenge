@@ -1,4 +1,4 @@
-import { jobs } from "@/app/lib/jobs";
+import { jobs } from "@/app/api/lib/jobs";
 import { NextRequest, NextResponse } from "next/server";
 import { Status } from "../../utils/status";
 
