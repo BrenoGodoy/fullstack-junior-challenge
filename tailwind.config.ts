@@ -8,6 +8,14 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        'custom-sm': '640px',
+        'custom-md': '768px',
+        'custom-lg': '1124px',
+        'custom-xl': '1280px',
+        'custom-2xl': '1480px',
+        'custom-3xl': '1920px',
+      },
       colors: {
         custom: {
           primary: {
