@@ -13,7 +13,7 @@ export default function Details({imageUrl, description, title}: any) {
       </div>
       <div className="mt-10">
         <h3 className="text-xl">{title}</h3>
-        <p className="mt-2 text-sm text-gray-600">{description}</p>
+        <p className="mt-2 text-sm text-[#909090]">{description}</p>
       </div>
     </div>
   )
