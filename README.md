@@ -66,7 +66,7 @@ POST - /api/jobs?level=Junior
 ]
 ```
 
-POST - /api/jobs/[id]
+POST - /api/job/[id]
 -> Deve retornar um único 'job' com base no ID passado como parâmetro;
 ```bash
 {
@@ -77,7 +77,7 @@ POST - /api/jobs/[id]
 }
 ```
 
-POST - /api/jobs/submit
+POST - /api/job/submit
 -> Deve enviar através do body a seguinte estrutura:
 ```bash
 {
