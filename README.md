@@ -8,7 +8,7 @@
 
 ## Documentação da API
 
-ATENÇÃO: Todas as rotas devem receber no body uma chave 'secret' com a string 'naranja-labs', caso contrário o acesso será negado.
+ATENÇÃO: Todas as rotas devem receber no Header uma chave 'secret' com a string 'naranja-labs', caso contrário o acesso será negado.
 
 POST - /api/jobs
 -> Deve retornar uma lista com todos os 'jobs'.
