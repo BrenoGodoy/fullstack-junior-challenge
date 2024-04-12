@@ -1,6 +1,6 @@
 export default function Title() {
   return (
-    <section className="w-97">
+    <section className="w-97 mt-20">
       <h2 className="text-7xl font-extrabold font-poppins text-[#403C39]">Let your 
       <span className="text-custom-primary-500"> groceries</span>
       </h2>
