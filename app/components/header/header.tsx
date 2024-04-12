@@ -3,7 +3,7 @@ import NavItem from "./components/navItem";
 
 export default function Header() {
   return (
-    <header className="flex flex-wrap justify-around items-center py-9">
+    <header className="flex flex-wrap justify-between items-center py-9">
       <div>
         <h1 className="text-4xl font-bold font-poppins">
           <span className="text-custom-primary-500">Finest</span>
