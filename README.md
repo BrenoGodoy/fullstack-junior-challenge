@@ -108,3 +108,30 @@ ATENÇÃO: Ao vizualizar a tela no seu computador utilize 1920x1080 como padrão
 Tela do Front-end (1920x1080):
 
 ![Captura de tela de 2024-04-13 01-42-31](https://github.com/BrenoGodoy/BrenoGodoy/assets/98183800/0c7dc502-8f72-4e1a-a302-7195783a4418)
+
+## Rodando localmente
+
+Clone o projeto
+
+```bash
+  git clone git@github.com:BrenoGodoy/fullstack-junior-challenge.git
+```
+Entre no projeto
+
+```bash
+cd fullstack-junior-challenge
+```
+
+Instale as dependências
+
+```bash
+  npm install
+```
+
+Inicie o servidor
+
+```bash
+  npm run dev
+```
+
+Pronto! Agora você tem rodando em http://localhost:3000/ a página web e a API. Basta entrar em http://localhost:3000/ na web para acessar o front e fazer as requisições para a mesma URL para acessar as rotas da API.
