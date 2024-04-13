@@ -12,6 +12,8 @@ ATENÇÃO: Todas as rotas devem receber no Header uma chave 'secret' com a strin
 
 OBS: O arquivo .env está exposto e já vem com o projeto apenas para facilitar, normalmente estaria no gitignore
 
+## Rotas
+
 POST - /api/jobs
 -> Deve retornar uma lista com todos os 'jobs'.
 ```bash
