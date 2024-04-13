@@ -7,6 +7,10 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'poppins': ['poppins', 'sans-serif'],
+      'montserrat': ['montserrat', 'serif']
+    },
     extend: {
       screens: {
         'custom-sm': '640px',
